@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:cornsilk
+        }
+        .row{
+            width: 300px;
+            height: 420px;
+            padding: 20px;
+            border:2px solid orange;
+            background-color:aqua;
+            margin: 50px auto;
+            border-radius: 20px
+        }
+        input{
+            background-color:rgb(236, 236, 850);
+        }
+        .button{
+        	background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <form action="" name="form">
+            Brand name:<br><input type="text"><br><br>
+            Brand wholesale price: &nbsp;&nbsp;<input type="number" name="input1"><br><br>
+            Number of goods: &nbsp;&nbsp;<input type="number" name="input2"><br><br>
+            Add-on price: <br>
+            <input type="radio" name="radio" value="0"> 0%<br>
+            <input type="radio" name="radio" value="10"> 10%<br>
+            <input type="radio" name="radio" value="15"> 15%<br>
+            <input type="radio" name="radio" value="20"> 20%<br><br>
+            <input type="button" value="Calculation" onclick="fun()" class="button"><br><br>
+            Spent: &nbsp;&nbsp;<input type="text"  name="input3"><br><br>
+            Benefits: &nbsp;&nbsp;<input type="text" name="input4"><br><br>
+            Total output: &nbsp;&nbsp;<input type="text" name="input5">
+        </form>
+    </div>
+    <script>
+        function fun(){
+            let a =document.form.input1.value
+            let b =document.form.input2.value
+            let c = a*b
+            document.form.input3.value= c
+            let f = document.form.radio.value
+            let d = c/100
+            let j = d*f
+            document.form.input4.value=j
+            document.form.input5.value =j+c
+        }
+    </script>
+</body>
+</html>
